@@ -1,4 +1,5 @@
 import { Component, createEffect } from "solid-js";
+import luckysheet from 'hi-luckysheet'
 import styles from "./style.module.less";
 
 const Sheet: Component<{
@@ -10,7 +11,7 @@ const Sheet: Component<{
 }) => {
 
   createEffect(() => {
-    window.luckysheet.create({
+    luckysheet.create({
       container: "sheet",
       lang: "zh",
       showinfobar: false,
@@ -24,16 +25,29 @@ const Sheet: Component<{
           order: 0, //工作表的下标
           hide: 0, //是否隐藏
           row: 100, //行数
-          column: 18, //列数
+          column: 100, //列数
           defaultRowHeight: 25, //自定义行高
           defaultColWidth: 100, //自定义列宽
           celldata: [
             {
               c: 0,
               r: 0,
+              lo: 1,
               v: {
-                m: 'seahi', // 显示值
+                m: '', // 显示值
                 v: 'seahi', // 原始值
+                // ct: {
+                //   fa: 'General',
+                //   t: 'g'
+                // }
+              }
+            },
+            {
+              c: 1,
+              r: 0,
+              v: {
+                m: '', // 显示值
+                v: 'hi', // 原始值
                 // ct: {
                 //   fa: 'General',
                 //   t: 'g'
@@ -48,7 +62,15 @@ const Sheet: Component<{
             rowhidden: {}, //隐藏行
             colhidden: {}, //隐藏列
             borderInfo: {}, //边框
-            authority: {}, //工作表保护
+            authority: {
+              sheet: true,
+              password: '1'
+              // selectunLockedCells: true,
+              // selectLockedCells: false,
+              // allowRangeList: [{
+              //   sqref: "$A$2:$CV$1000,$G$1:$CV$1"
+              // }]
+            }, //工作表保护
           },
           scrollLeft: 0, //左右滚动条位置
           scrollTop: 0, //上下滚动条位置
@@ -70,6 +92,8 @@ const Sheet: Component<{
         },
       ],
     });
+    luckysheet.setRangeShow("A2",{show:false})
+
   });
 
   return (

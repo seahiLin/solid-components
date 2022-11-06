@@ -1,4 +1,4 @@
-import { Component, createEffect } from "solid-js";
+import { Component } from "solid-js";
 import { useSearchParams } from "@solidjs/router";
 import Sheet from "./Sheet";
 import styles from "./style.module.less";
