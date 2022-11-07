@@ -11,8 +11,22 @@ const Detail: Component = () => {
   const columns = [
     {
       title: '下单人手机号',
-      
-    }
+      options: [
+        {
+          title: '13111111111',
+          value: 13111111111
+        }
+      ]
+    },
+    {
+      title: '乘车人姓名',
+      options: [
+        {
+          title: 'seahi',
+          value: 'seahi'
+        }
+      ]
+    },
   ]
 
   const onExport = () => {
