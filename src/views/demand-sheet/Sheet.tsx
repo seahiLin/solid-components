@@ -57,9 +57,37 @@ const SheetConfig: any = {
       zoomRatio: 1, // 缩放比例
       image: [], //图片
       showGridLines: 1, //是否显示网格线
-      dataVerification: {}, //数据验证配置
+      dataVerification: {
+        "3_0": {
+          "type": "dropdown",
+          "type2": null,
+          "value1": "Develop,Fix,Done",
+          "value2": "",
+          "checked": true,
+          "remote": true,
+          "prohibitInput": true,
+          "hintShow": false,
+          "hintText": ""
+      },
+      "3_2": {
+        "type": "checkbox",
+        "type2": null,
+        "value1": "Pass",
+        "value2": "Fail",
+        "checked": false,
+        "remote": true,
+        "prohibitInput": false,
+        "hintShow": false,
+        "hintText": ""
+    },
+      }, //数据验证配置
     },
   ],
+  hook: {
+    cellUpdated: (row: number, col: number, oldVal: object, newVal: object, isRefresh: boolean) => {
+      console.log(row, col, oldVal, newVal, isRefresh)
+    }
+  }
 }
 
 const Sheet: Component<{
