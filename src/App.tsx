@@ -1,18 +1,24 @@
-import type { Component } from 'solid-js';
-import { Routes, Route } from "@solidjs/router"
+/* @refresh reload */
+import { render } from 'solid-js/web';
+import type { Component } from "solid-js";
+import { Routes, Route, Router } from "@solidjs/router";
 
-import List from '@/views/demand-sheet/List'
-import Detail from '@/views/demand-sheet/Detail'
+import Dialog from "@/components/dialog";
 
 const App: Component = () => {
   return (
-    <div>
+    <Router>
       <Routes>
-        <Route path="/demand-list" component={List} />
-        <Route path="/demand-detail" component={Detail} />
+        <Route
+          path="/dialog"
+          element={<Dialog props={{
+            title: '标题',
+            desc: "description"
+          }} />}
+        />
       </Routes>
-    </div>
+    </Router>
   );
 };
 
-export default App;
+render(() => <App />, document.getElementById("root") as HTMLElement)
