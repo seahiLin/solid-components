@@ -18,7 +18,7 @@ const Dialog = (props: {
 
   return (
     <Mask visible={visible()}>
-      <div class="dialog-container">
+      <div class="sc-dialog-container">
         {props.props?.children || (
           <div class="title-container">
             <div class="title">{props.props?.title}</div>

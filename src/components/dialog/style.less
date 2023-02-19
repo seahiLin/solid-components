@@ -1,32 +1,24 @@
-// import { px2vw } from /\/"@/utils/style";
-// import { styled } from "solid-styled-components";
-
-.px2vw(@px, @width: 375) {
-  @var: (@px / @width) * 100;
-  @vw: ~"@{var}vw";
-}
-
-.dialog-container {
-  width: .px2vw(271)[@vw];
+.sc-dialog-container {
+  width: 271px;
   background: #FFFFFF;
   border-radius: 4px;
 
   .title-container {
-    padding: .px2vw(23)[@vw] .px2vw(16)[@vw] .px2vw(29)[@vw];
+    padding: 23px 16px 29px;
     font-family: PingFangSC-Regular, PingFang SC;
     text-align: center;
 
     .title {
-      font-size: .px2vw(18)[@vw];
+      font-size: 18px;
       color: #000000;
-      line-height: .px2vw(25)[@vw];
+      line-height: 25px;
     }
 
     .desc {
-      font-size: .px2vw(13)[@vw];
+      font-size: 13px;
       color: #999999;
-      line-height: .px2vw(19)[@vw];
-      margin-top: .px2vw(16)[@vw];
+      line-height: 19px;
+      margin-top: 16px;
     }
   }
 
@@ -38,10 +30,10 @@
       flex-basis: 1;
       flex-grow: 1;
       text-align: center;
-      padding: .px2vw(16)[@vw] 0 .px2vw(13)[@vw];
-      font-size: .px2vw(15)[@vw];
+      padding: 16px 0 13px;
+      font-size: 15px;
       font-family: PingFangSC-Regular, PingFang SC;
-      line-height: .px2vw(21)[@vw];
+      line-height: 21px;
       background: #ffffff;
 
       &.close {
@@ -57,7 +49,7 @@
       width: 1px;
       align-self: stretch;
       background: #E6E6E6;
-      margin-bottom: .px2vw(4)[@vw];
+      margin-bottom: 4px;
     }
   }
 }

@@ -10,7 +10,7 @@ const Mask = (props: MaskProps) => {
 
   return (
     <Show when={props.visible}>
-      <div class='fixed-wrapper'>
+      <div class='sc-fixed-wrapper'>
         <div>
           {props.children}
         </div>
