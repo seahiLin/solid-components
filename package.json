@@ -38,10 +38,12 @@
     "@tarojs/react": "3.6.0",
     "@tarojs/runtime": "3.6.0",
     "@tarojs/shared": "3.6.0",
+    "@tarojs/taro": "^3.6.1",
     "babel-preset-taro": "3.6.0",
     "component-register": "^0.8.3",
+    "lodash": "^4.17.21",
     "solid-js": "^1.5.1",
-    "taro-plugin-solid": "^3.6.1",
+    "taro-plugin-solid": "^3.6.2",
     "taro-solid-runtime": "^3.6.1",
     "webpack": "^5.75.0"
   }

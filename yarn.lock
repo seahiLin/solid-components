@@ -1760,7 +1760,7 @@
     "@tarojs/taro" "3.6.0"
     "loader-utils" "^1.2.3"
 
-"@tarojs/taro@^3.6.1":
+"@tarojs/taro@^3.6.1", "@tarojs/taro@3.6.1":
   "integrity" "sha512-BV1K3E94Pr3VxFKah+kt1C1qk2x37RJ7zScHsAiIMHZxgi4IX1leJOg1iFfSUbXo7lD7IQch+UOelHHEa9OLpA=="
   "resolved" "https://registry.npmjs.org/@tarojs/taro/-/taro-3.6.1.tgz"
   "version" "3.6.1"
@@ -1783,14 +1783,6 @@
   dependencies:
     "@tarojs/api" "3.6.0"
     "@tarojs/runtime" "3.6.0"
-
-"@tarojs/taro@3.6.1":
-  "integrity" "sha512-BV1K3E94Pr3VxFKah+kt1C1qk2x37RJ7zScHsAiIMHZxgi4IX1leJOg1iFfSUbXo7lD7IQch+UOelHHEa9OLpA=="
-  "resolved" "https://registry.npmjs.org/@tarojs/taro/-/taro-3.6.1.tgz"
-  "version" "3.6.1"
-  dependencies:
-    "@tarojs/api" "3.6.1"
-    "@tarojs/runtime" "3.6.1"
 
 "@tarojs/taroize@3.6.0":
   "integrity" "sha512-8zkKfckfE+W0iGo7ZrMjRhYSJCv6y7olIluzkBR9MHMwrEW3xuDVsG7Gu5Ue1smEmcsGmKRV1MPtpE3as45ykQ=="
@@ -8366,7 +8358,7 @@
   "resolved" "https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.9.0.tgz"
   "version" "0.9.0"
 
-"object-assign@^4.0.1", "object-assign@^4.1.0", "object-assign@^4.1.1":
+"object-assign@^4.0.1", "object-assign@^4.1.0", "object-assign@^4.1.1", "object-assign@>=4.0.1":
   "integrity" "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg=="
   "resolved" "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz"
   "version" "4.1.1"
@@ -9110,6 +9102,14 @@
   "resolved" "https://registry.npmjs.org/postcss-plugin-constparse/-/postcss-plugin-constparse-3.6.0.tgz"
   "version" "3.6.0"
 
+"postcss-px-to-viewport@^1.1.1":
+  "integrity" "sha512-2x9oGnBms+e0cYtBJOZdlwrFg/mLR4P1g2IFu7jYKvnqnH/HLhoKyareW2Q/x4sg0BgklHlP1qeWo2oCyPm8FQ=="
+  "resolved" "https://registry.npmjs.org/postcss-px-to-viewport/-/postcss-px-to-viewport-1.1.1.tgz"
+  "version" "1.1.1"
+  dependencies:
+    "object-assign" ">=4.0.1"
+    "postcss" ">=5.0.2"
+
 "postcss-pxtransform@3.6.0":
   "integrity" "sha512-X8CcyMxiFJAdoexp+wzjxd81xKaih5j+P9gAS8Q4rU/raniskVNc0LvuukhI9VTAUAU1vUSk/rLit+6urMc/kA=="
   "resolved" "https://registry.npmjs.org/postcss-pxtransform/-/postcss-pxtransform-3.6.0.tgz"
@@ -9187,7 +9187,7 @@
     "source-map" "^0.6.1"
     "supports-color" "^5.4.0"
 
-"postcss@^7.0.0 || ^8.0.1", "postcss@^8.0.0", "postcss@^8.0.9", "postcss@^8.1.0", "postcss@^8.1.10", "postcss@^8.2.15", "postcss@^8.2.2", "postcss@^8.3.5", "postcss@^8.4.18":
+"postcss@^7.0.0 || ^8.0.1", "postcss@^8.0.0", "postcss@^8.0.9", "postcss@^8.1.0", "postcss@^8.1.10", "postcss@^8.2.15", "postcss@^8.2.2", "postcss@^8.3.5", "postcss@^8.4.18", "postcss@>=5.0.2":
   "version" "8.4.18"
   dependencies:
     "nanoid" "^3.3.4"
@@ -10893,10 +10893,10 @@
     "css-mediaquery" "^0.1.2"
     "postcss-value-parser" "^3.3.0"
 
-"taro-plugin-solid@^3.6.1":
-  "integrity" "sha512-c1uKwi7HiPppTICmsQhJCDC2Os9dNiwqxRMSezKpv1wMM20ptOPgsB2JWVHJ6As6gxqIAMBiAqOacnv0PXo53w=="
-  "resolved" "https://registry.npmjs.org/taro-plugin-solid/-/taro-plugin-solid-3.6.1.tgz"
-  "version" "3.6.1"
+"taro-plugin-solid@^3.6.2":
+  "integrity" "sha512-Hxvy6LRnwzWuvXi+E+C4nKedYFM0lX70w3hui3XOIUvV4DTJ+92nkqg/pVf+mXoAylQi3G+R5qQ4l/LC8oRUnQ=="
+  "resolved" "https://registry.npmjs.org/taro-plugin-solid/-/taro-plugin-solid-3.6.2.tgz"
+  "version" "3.6.2"
   dependencies:
     "@tarojs/helper" "3.6.1"
     "@tarojs/runtime" "3.6.1"

@@ -14,21 +14,28 @@ export default () => {
     {
       index: 'A',
       title: '标题A',
-      children: <For each={new Array(100).fill('seahi')}>
+      children: <For each={new Array(10).fill('seahi')}>
         {(content) => <div>{content}</div>}
       </For>
     },
     {
       index: 'B',
       title: '标题B',
-      children: <For each={new Array(100).fill('Bkkk')}>
+      children: <For each={new Array(10).fill('Bkkk')}>
+        {(content) => <div>{content}</div>}
+      </For>
+    },
+    {
+      index: 'Be',
+      title: '标题Be',
+      children: <For each={new Array(40).fill('Bkkk')}>
         {(content) => <div>{content}</div>}
       </For>
     },
     {
       index: 'C',
       title: '标题C',
-      children: <For each={new Array(100).fill('Ckkk')}>
+      children: <For each={new Array(10).fill('Ckkk')}>
         {(content) => <div>{content}</div>}
       </For>
     },
@@ -36,7 +43,7 @@ export default () => {
 
   return (
     <div style={style}>
-      <IndexBar list={list} />
+      <IndexBar props={{list}}  />
     </div>
   )
 }

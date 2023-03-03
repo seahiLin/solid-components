@@ -1,13 +1,18 @@
 const path = require('path')
+const process = require('process')
+
+const { componentConfig } = require('@tarojs/webpack5-runner/dist/template/component')
+componentConfig.includes.add('native-slot')
 
 const config = {
-  projectName: 'example',
+  projectName: 'solid-components',
   date: '2023-1-16',
-  designWidth: 750,
+  designWidth: 375,
   deviceRatio: {
     640: 2.34 / 2,
     750: 1,
-    828: 1.81 / 2
+    828: 1.81 / 2,
+    375: 2 / 1,
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
@@ -40,6 +45,9 @@ const config = {
       chain.plugin('addGlobalVars').use(webpack.ProvidePlugin, [{
         "Node": ["@tarojs/runtime", "TaroNode"],
         "HTMLHeadElement": ["@/constants/html.ts", "HTMLHeadElement"]
+      }])
+      chain.plugin('replaceGlobalVars').use(webpack.DefinePlugin, [{
+        __COMPILE_TYPE__: `"${process.env.TARO_ENV}"`
       }])
     },
     runtime: {

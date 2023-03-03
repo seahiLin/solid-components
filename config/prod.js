@@ -5,7 +5,7 @@ module.exports = {
   defineConstants: {
   },
   terser: {
-    enable: true,
+    enable: false,
     config: {
       // 配置项同 https://github.com/terser/terser#minify-options
     },

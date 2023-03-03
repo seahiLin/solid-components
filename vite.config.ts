@@ -1,4 +1,5 @@
 import path from "path";
+import process from "process";
 import { defineConfig } from "vite";
 import solidPlugin from "vite-plugin-solid";
 // @ts-ignore
@@ -9,6 +10,10 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "src"),
     },
+  },
+  define: {
+    "__COMPILE_TYPE__": `"web"`,
+    "process.env.TARO_ENV": `"${process.env.TARO_ENV}"`
   },
   plugins: [
     solidPlugin({}),
